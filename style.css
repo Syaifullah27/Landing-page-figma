@@ -99,8 +99,8 @@ body {
 }
 
 .main-hero {
-
-    padding-top: 150px;
+    overflow: hidden;
+    padding-top: 100px;
     display: flex;
     max-width: 1000px;
     margin: 0 auto;
@@ -110,6 +110,7 @@ body {
 .main-btn {
     display: flex;
     gap: 20px;
+
 }
 
 .main-btn button {
@@ -135,6 +136,18 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.hero-left .animate {
+    transform: translateX(-100%);
+}
+
+.hero-left.show-animate .animate {
+    transform: translateX(0);
+    animation: mainHero .5s ease;
+    transition: 1s all ease;
+}
+
+
 
 .hero-left p:first-child {
     color: #545BE8;
@@ -164,88 +177,52 @@ body {
     position: relative;
 }
 
+.hero-right .animate {
+    transform: translateX(100%);
+}
+
+.hero-right.show-animate .animate {
+    transform: translateX(0);
+    animation: mainHero .5s ease;
+    transition: 1s all ease;
+}
+
+@keyframes mainHero {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+
+
+
+
 .hero-right img {
     padding: 20px;
-    width: 400px;
+    width: 500px;
     object-fit: cover;
     
 }
 
-.hero-right .circle-purple {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #7253A4;
-    left: -20px;
-    top: -10px;
-}
-
-.hero-right .circle-orange {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #FE753F;
-    right: 50px;
-    top: 10px;
-}
-.hero-right .circle-orange2 {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #FE753F;
-    left: 150px;
-    bottom: -10px;
-}
-
-.hero-right .circle-tosca {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #058FCB;
-    right: 30px;
-    bottom: 10px;
-}
-
-.hero-right .circle-tosca2 {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #058FCB;
-    left: 50px;
-    bottom: 10px;
-}
-
-.line-orange {
-    position: absolute;
-    bottom: 100px;
-    left: -60px;
-    transform: rotate(-45deg);
-    width: 150px;
-    border: 1px solid #FE753F;
-}
-
-.line-orange2 {
-    position: absolute;
-    bottom: 85px;
-    left: -20px;
-    transform: rotate(-45deg);
-    width: 100px;
-    border: 1px solid #FE753F;
-}
-
-.line-orange3 {
-    position: absolute;
-    bottom: 90px;
-    left: -25px;
-    transform: rotate(-45deg);
-    width: 180px;
-    border: 1px solid #FE753F;
-}
 
 .card-wrapper {
     background-color: #FFFFFF;
@@ -265,6 +242,16 @@ body {
     flex-direction: column;
     gap: 20px;
     flex: 1;
+}
+
+.card-left .animate {
+    transform: translateX(-150%);
+}
+
+.card-left.show-animate .animate {
+    transform: translateX(0);
+    animation: mainHero .5s ease;
+    transition: 1s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card-left p:first-child{
@@ -287,6 +274,20 @@ body {
     gap: 25px;
     flex: 2;
 }
+
+
+.card-right .animate{
+    transform: scale(0.5);
+}
+
+
+.card-right.show-animate .animate {
+    transform: scale(1);
+    animation: mainHero .3s ease;
+    transition: 1s all ease;
+}
+
+
 
 .card-items {
     cursor: pointer;
@@ -321,6 +322,16 @@ body {
     right: 110px;
     bottom: 50px;
     cursor: pointer;
+}
+
+.card-right-arrow .animate {
+    transform: translateX(-1200%);
+}
+
+.card-right-arrow.show-animate .animate {
+    transform: translateX(0);
+    animation: mainHero .5s ease;
+    transition: 1s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .arrow img{
@@ -379,6 +390,16 @@ body {
     text-align: center;
 }
 
+.member-course .animate {
+    transform: scale(0.5);
+}
+
+.member-course.show-animate .animate {
+    transform: scale(1);
+    animation: mainHero .5s ease;
+    transition: .5s all ease;
+}
+
 .member-course h3 {
     font-size: 25px;
     color: #F0C932;
@@ -412,6 +433,16 @@ body {
     flex-wrap: wrap;
     gap: 45px;
     flex: 2;
+}
+
+.left-course-selection .animate {
+    transform: scale(0);
+}
+
+.left-course-selection.show-animate .animate {
+    transform: scale(1);
+    animation: mainHero .5s ease;
+    transition: 1s all cubic-bezier(0.175, 0.885, 0.32, 1.250);
 }
 
 .card-course {
@@ -480,6 +511,16 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.911));
 }
 
+.right-course-selection .animate {
+    transform: scale(0);
+}
+
+.right-course-selection.show-animate .animate {
+    transform: scale(1);
+    animation: opacity .5s ease;
+    transition: 1s all ease;
+}
+
 
 .right-course-selection {
     display: flex;
@@ -516,6 +557,16 @@ body {
 
 .testimoni {
     background-color: #FFFFFF;
+}
+
+.testimoni-card .animate {
+    transform: scale(0);
+}
+
+.testimoni-card.show-animate .animate {
+    transform: scale(1);
+    animation: opacity .6s ease;
+    transition: 1s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .testimoni h2 {
