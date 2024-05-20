@@ -108,8 +108,8 @@ window.onscroll = () => {
     
     testimoni.forEach(card => {
         let top = window.scrollY;
-        let offset = card.offsetTop - 150;
-        let height = card.offsetHeight + 250;
+        let offset = card.offsetTop - 200;
+        let height = card.offsetHeight;
 
 
         if (top > offset && top < offset + height) {

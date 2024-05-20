@@ -397,7 +397,7 @@ body {
 .member-course.show-animate .animate {
     transform: scale(1);
     animation: mainHero .5s ease;
-    transition: .5s all ease;
+    transition: 1s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .member-course h3 {
@@ -442,7 +442,7 @@ body {
 .left-course-selection.show-animate .animate {
     transform: scale(1);
     animation: mainHero .5s ease;
-    transition: 1s all cubic-bezier(0.175, 0.885, 0.32, 1.250);
+    transition: 1s all cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card-course {
