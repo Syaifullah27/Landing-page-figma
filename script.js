@@ -95,8 +95,8 @@ window.onscroll = () => {
 
     rightCourseSelection.forEach(card => {
         let top = window.scrollY;
-        let offset = card.offsetTop - 150;
-        let height = card.offsetHeight + 250;
+        let offset = card.offsetTop - 250;
+        let height = card.offsetHeight + 500;
 
         if (top > offset && top < offset + height) {
             card.classList.add('show-animate');
